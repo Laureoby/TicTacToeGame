@@ -1,0 +1,69 @@
+body{
+  background-color: rgb(116, 114, 114);
+}
+.title{
+  color: white;
+}
+.app{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+.gameboard{
+  width: 450px;
+  height: 450px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.square{
+  width: 140px;
+  height: 150px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle{
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  border: 15px solid #7de1eefd;
+  box-sizing: border-box;
+}
+.cross{
+  height: 130px;
+  width: 130px;
+  position: relative;
+  transform: rotate(45deg);
+}
+.cross::before, .cross::after{
+  content: "";
+  position: absolute;
+  background-color: #f00cf09d;
+}
+.cross::before{
+  left: 50%;
+  width: 30%;
+  margin-left: -15%;
+  height: 100%;
+
+}
+.cross::after{
+  top: 50%;
+  right: 0%;
+  height: 30%;
+  margin-top: -15%;
+  width: 100%;
+  
+}
+#winMsg{
+  font-size: 7em;
+  color: gold;
+  font-weight: bolder;
+  position: absolute;
+}
